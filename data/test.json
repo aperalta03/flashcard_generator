@@ -1,0 +1,32 @@
+[
+    {
+      "question_number": 1,
+      "question": "Which planet in our Solar System is the largest by volume and mass?",
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in the Solar System, more than twice as massive as all other planets combined."
+    },
+    {
+      "question_number": 2,
+      "question": "What name is given to the region around a star where conditions could allow liquid water to exist on a planet's surface?",
+      "answer": "The habitable zone (or Goldilocks zone)",
+      "explanation": "This zone is neither too hot nor too cold, allowing for liquid water—an essential ingredient for life as we know it."
+    },
+    {
+      "question_number": 3,
+      "question": "Which celestial bodies are defined as small Solar System objects that typically have a nucleus made of ice, dust, and rock, and develop a visible atmosphere when near the Sun?",
+      "answer": "Comets",
+      "explanation": "Comets are often referred to as \"dirty snowballs\" and typically exhibit a tail (coma) when close to the Sun."
+    },
+    {
+      "question_number": 4,
+      "question": "Which star is the closest to Earth (excluding the Sun)?",
+      "answer": "Proxima Centauri",
+      "explanation": "Proxima Centauri is approximately 4.24 light-years away from Earth, making it our closest stellar neighbor."
+    },
+    {
+      "question_number": 5,
+      "question": "What phenomenon explains the apparent shift in position of nearby stars against the background of distant ones as Earth orbits the Sun?",
+      "answer": "Parallax",
+      "explanation": "Parallax is the apparent shift in position of an object when viewed from different vantage points, used to measure stellar distances."
+    }
+]

@@ -1,95 +1,90 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import React, { use, useState } from 'react'
+import styles from './page.module.css'
+import data from '../data/data.json'
 
 export default function Home() {
+  const [flashcards, setFlashcards] = useState([])
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [flipped, setFlipped] = useState(false)
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0]
+    if (!file) return
+
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      try {
+        const json = JSON.parse(e.target.result)
+        if (Array.isArray(json)) {
+          setFlashcards(json)
+        } else {
+          setFlashcards([json])
+        }
+      } catch (error) {
+        console.error("Invalid JSON file", error)
+      }
+    }
+    reader.readAsText(file)
+  }
+
+  if (flashcards.length == 0) {
+    return (
+      <div className={styles.page}>
+        <h1>Upload Your Flashcard Data (JSON - question_number, question, answer, explanation)</h1>
+        <input type="file" accept=".json" onChange={handleFileUpload} />
+      </div>
+    )
+  }
+
+  const currentCard = flashcards[currentIndex]
+
+  const handleFlip = () => { 
+    setFlipped(!flipped)
+  }
+
+  const handleNext = () => {
+    setFlipped(false)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length)
+  }
+
+  const handlePrevious = () => {
+    setFlipped(false)
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length)
+  }
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <div className={styles.flashcardContainer}>
+        <button className={styles.leftArrow} onClick={handlePrevious}>←</button>
+        <div 
+          className={`${styles.flipCard} ${flipped ? styles.flip : ''}`}
+          onClick={handleFlip}
+        >
+          <div className={styles.flipCardInner}>
+            <div className={styles.flipCardFront}>
+              <div className={styles.cardHeader}>
+                <span className={styles.questionNumber}>{currentCard.question_number}</span>
+              </div>
+              <div className={styles.cardContent}>
+                <p className={styles.questionText}>{currentCard.question}</p>
+              </div>
+            </div>
+            <div className={styles.flipCardBack}>
+              <div className={styles.cardHeader}>
+                <span className={styles.questionNumber}>{currentCard.question_number}</span>
+              </div>
+              <div className={styles.cardContent}>
+                <p className={styles.answerText}>Answer: {currentCard.answer}</p>
+                <p className={styles.explanationText}>
+                  <strong>Explanation:</strong> {currentCard.explanation}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <button className={styles.rightArrow} onClick={handleNext}>→</button>
+      </div>
     </div>
-  );
+  )
 }
