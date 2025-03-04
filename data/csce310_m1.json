@@ -1,0 +1,602 @@
+[
+    {
+      "question_number": 1,
+      "question": "When working in an ER model, what does each row in the relational table represent?",
+      "answer": "An instance (occurrence) of an entity.",
+      "explanation": "Each row is also referred to as a record or tuple."
+    },
+    {
+      "question_number": 2,
+      "question": "What is one primary function of business rules in database design?",
+      "answer": "They can serve as a communication tool between the users and designers.",
+      "explanation": "Business rules help clarify how data is handled and ensure users and designers remain aligned on requirements."
+    },
+    {
+      "question_number": 3,
+      "question": "In a business rule, which element helps a database designer identify 1:1, 1:M, or M:N relationships?",
+      "answer": "Verbs",
+      "explanation": "Determining whether the nouns representing entities are singular or plural helps categorize those relationship types."
+    },
+    {
+      "question_number": 4,
+      "question": "When discovering new business rules, with whom might interviews be faster and more direct yet potentially less reliable?",
+      "answer": "End users",
+      "explanation": "Because perceptions may differ, interviews with end users are less reliable. Even minor differences could have major impacts."
+    },
+    {
+      "question_number": 5,
+      "question": "If a coupon can only be redeemed by one customer and is used twice by different customers, which type of relationship is being violated?",
+      "answer": "1:1 relationship",
+      "explanation": "A 1:1 relationship would mean one coupon can only be redeemed by one customer—and each customer may redeem only one coupon."
+    },
+    {
+      "question_number": 6,
+      "question": "(T/F) The network model has structural level dependence?",
+      "answer": "True",
+      "explanation": "Structural level dependence means changes to the database structure require changes in all application programs."
+    },
+    {
+      "question_number": 7,
+      "question": "What is a key characteristic of NoSQL databases?",
+      "answer": "They are not based on the relational model.",
+      "explanation": "NoSQL databases typically use a schema-less key-value or document model and support large amounts of sparse data."
+    },
+    {
+      "question_number": 8,
+      "question": "Dale’s boss wants a simple representation of the entire employee database. What type of model should Dale construct?",
+      "answer": "A data model",
+      "explanation": "A data model is an abstract, simplified representation of more complex real-world data."
+    },
+    {
+      "question_number": 9,
+      "question": "In the context of relational databases, a column in a relational table is associated with what aspect of a real-world entity?",
+      "answer": "Attributes",
+      "explanation": "Columns represent the characteristics (attributes) of an entity."
+    },
+    {
+      "question_number": 10,
+      "question": "A single student can take multiple classes, and each class can have multiple students. What type of relationship is this?",
+      "answer": "Many-to-many (M:N)",
+      "explanation": "A student can take many classes, and each class can have many students."
+    },
+    {
+      "question_number": 11,
+      "question": "Which relational algebra operator uses a two-column table as the dividend and a one-column table as the divisor?",
+      "answer": "DIVIDE",
+      "explanation": "The DIVIDE operator takes a two-column table (the dividend) and a one-column table (the divisor)."
+    },
+    {
+      "question_number": 12,
+      "question": "A data dictionary is sometimes described as what?",
+      "answer": "\"the database designer's database\"",
+      "explanation": "It records detailed design decisions about tables, fields, relationships, etc."
+    },
+    {
+      "question_number": 13,
+      "question": "A(n) ______ table is the implementation of a composite entity used to implement an M:N relationship.",
+      "answer": "Linking table",
+      "explanation": "Also called a bridge or associative table, it uses the primary keys of the related tables as its own key."
+    },
+    {
+      "question_number": 14,
+      "question": "If one shop manager can only be in charge of a single shop, what kind of relationship do these two entities have?",
+      "answer": "1:1",
+      "explanation": "A one-to-one relationship means each manager is associated with exactly one shop, and vice versa."
+    },
+    {
+      "question_number": 15,
+      "question": "Relational algebra defines the theoretical way of manipulating table contents using what type of tools?",
+      "answer": "Relational operators",
+      "explanation": "Operators like SELECT, PROJECT, JOIN, etc., manipulate data in tables."
+    },
+    {
+      "question_number": 16,
+      "question": "(T/F) The row's range of permissible values is known as its domain?",
+      "answer": "False",
+      "explanation": "The domain applies to an attribute (column), not the row."
+    },
+    {
+      "question_number": 17,
+      "question": "Which relational operator allows combining independent tables linked by common attributes?",
+      "answer": "JOIN",
+      "explanation": "JOIN combines data from two tables based on matching column values."
+    },
+    {
+      "question_number": 18,
+      "question": "A theater has a CUSTOMER table and a PLAY table with an M:N relationship. Introducing a BRIDGE entity creates which relationships instead?",
+      "answer": "1:M CUSTOMER, BRIDGE and 1:M PLAY, BRIDGE",
+      "explanation": "The bridge entity uses the primary keys of both tables to form its own primary key."
+    },
+    {
+      "question_number": 19,
+      "question": "If you have a 'GPA' attribute for students, what is the most appropriate data type for it?",
+      "answer": "Numeric",
+      "explanation": "GPA is a numeric value on which arithmetic can be performed."
+    },
+    {
+      "question_number": 20,
+      "question": "Which operator, also known as RESTRICT, yields values for all rows in a table that satisfy a given condition?",
+      "answer": "SELECT",
+      "explanation": "SELECT (or RESTRICT) is a unary operator that filters rows matching a condition."
+    },
+    {
+      "question_number": 21,
+      "question": "If an INSERT INTO PRODUCT statement fails because the new vendor data was never inserted, which relationship is causing the failure?",
+      "answer": "One-to-many from VENDOR to PRODUCT",
+      "explanation": "In a one-to-many relationship, the 'one' side (VENDOR) must exist before adding records to the 'many' side (PRODUCT)."
+    },
+    {
+      "question_number": 22,
+      "question": "(T/F) Authentication is the process the DBMS uses to verify that only registered users can access the database?",
+      "answer": "True",
+      "explanation": "Users must log in with valid credentials; the DBMS confirms permission."
+    },
+    {
+      "question_number": 23,
+      "question": "Which SQL command keyword is used to change the data type of the V_CODE attribute in a PRODUCT table?",
+      "answer": "MODIFY",
+      "explanation": "For example: ALTER TABLE PRODUCT MODIFY V_CODE CHAR(5);"
+    },
+    {
+      "question_number": 24,
+      "question": "Which pseudo-column is used in SQL to select the next available value from a sequence?",
+      "answer": "NEXTVAL",
+      "explanation": "NEXTVAL retrieves the next available value in a sequence."
+    },
+    {
+      "question_number": 25,
+      "question": "(T/F) The column list must be specified immediately after the INSERT INTO command name?",
+      "answer": "False",
+      "explanation": "SQL syntax is INSERT INTO table_name (col1, col2, ...) VALUES (...). The table name follows INSERT INTO, then the column list."
+    },
+    {
+      "question_number": 26,
+      "question": "To change the CUST_FNAM column to accommodate longer names, which SQL command syntax might you use?",
+      "answer": "ALTER TABLE table_name MODIFY CUST_FNAM CHAR(40);",
+      "explanation": "You must use ALTER TABLE … MODIFY to update an existing column’s data type."
+    },
+    {
+      "question_number": 27,
+      "question": "How would you add a P_DESCRIPTION column of type CHAR(255) to an existing PRODUCT table?",
+      "answer": "ALTER TABLE PRODUCT ADD (P_DESCRIPTION CHAR(255));",
+      "explanation": "ALTER TABLE … ADD is used to add a new column with the specified data type."
+    },
+    {
+      "question_number": 28,
+      "question": "When using CREATE TABLE PART AS SELECT to rename columns (e.g., P_CODE to PART_CODE), what determines the order of the new columns?",
+      "answer": "The order of the columns in the SELECT list.",
+      "explanation": "The new table’s columns follow the sequence in the SELECT clause, with aliases if specified."
+    },
+    {
+      "question_number": 29,
+      "question": "Do you need to use SELECT * when copying data from one table to another in SQL?",
+      "answer": "No, you can specify columns explicitly in the SELECT clause.",
+      "explanation": "SELECT * is not required; you can list the columns you want to copy."
+    },
+    {
+      "question_number": 30,
+      "question": "How can you remove the VENDOR_CODE column from a PART table in SQL?",
+      "answer": "ALTER TABLE PART DROP COLUMN VENDOR_CODE;",
+      "explanation": "Use ALTER TABLE … DROP COLUMN to remove a column entirely."
+    },
+    {
+      "question_number": 31,
+      "question": "If a NOT NULL column in PRODUCT disallows inserting the literal 'NOT NULL', what does that imply?",
+      "answer": "You must provide a valid (non-null) value for that column in an INSERT statement.",
+      "explanation": "Declaring a column NOT NULL means it cannot be left empty or assigned an invalid placeholder."
+    },
+    {
+      "question_number": 32,
+      "question": "If you have a table named EXTERNALVENDOR that’s no longer needed, how do you remove it from the database?",
+      "answer": "DROP TABLE EXTERNALVENDOR;",
+      "explanation": "DROP TABLE <table_name>; removes the table definition and its data."
+    },
+    {
+      "question_number": 33,
+      "question": "SMALLINT, INTEGER, and DECIMAL are examples of which general SQL data type category?",
+      "answer": "Numeric",
+      "explanation": "These are numeric data types on which arithmetic may be performed."
+    },
+    {
+      "question_number": 34,
+      "question": "If PRODMASTER.PROD_QOH must be updated by subtracting PRODSALES.PS_QTY, which SQL operation might you use?",
+      "answer": "SET PRODMASTER.PROD_QOH = PROD_QOH - PS_QTY",
+      "explanation": "You can update a table to reflect a new value by referencing the old value minus some quantity."
+    },
+    {
+      "question_number": 35,
+      "question": "How can you ensure a PART_PRICE column is never entered as a negative number?",
+      "answer": "Use a CHECK constraint, e.g., ALTER TABLE PART ADD CHECK (PART_PRICE >= 0);",
+      "explanation": "CHECK enforces a condition, so PART_PRICE must be zero or greater."
+    },
+    {
+      "question_number": 36,
+      "question": "(T/F) You must issue an ALTER TABLE command before using MODIFY to change a column’s data type?",
+      "answer": "True",
+      "explanation": "ALTER TABLE … MODIFY is the required syntax to adjust a column’s definition."
+    },
+    {
+      "question_number": 37,
+      "question": "If you only need to insert required values (e.g., PROD_CODE, PROD_DESCRIPT) into PRODUCT, which SQL syntax can you use?",
+      "answer": "INSERT INTO PRODUCT(PROD_CODE, PROD_DESCRIPT) VALUES ('BRT-345','Titanium drill bit');",
+      "explanation": "You can list only the columns you want to fill if others have defaults or allow nulls."
+    },
+    {
+      "question_number": 38,
+      "question": "Which SQL constraint ensures a column cannot hold negative numbers for a price field?",
+      "answer": "CHECK",
+      "explanation": "CHECK validates that the inserted value meets a condition or range, e.g., price >= 0."
+    },
+    {
+      "question_number": 39,
+      "question": "When updating data that spans two tables, which clause is typically used to link rows across both tables?",
+      "answer": "WHERE table1.key = table2.key",
+      "explanation": "The WHERE clause ensures you match the correct rows in each table."
+    },
+    {
+      "question_number": 40,
+      "question": "Which SQL data type specification allows a P_PRICE column to store typical price values (e.g., 4.99)?",
+      "answer": "DECIMAL(9,2)",
+      "explanation": "DECIMAL(9,2) reserves up to 9 digits, 2 of which are after the decimal point."
+    },
+    {
+      "question_number": 41,
+      "question": "Which type of attribute can make data management more difficult if left unnormalized?",
+      "answer": "Multivalued attribute",
+      "explanation": "Multivalued attributes can complicate queries and data integrity in a relational design."
+    },
+    {
+      "question_number": 42,
+      "question": "Which term represents a micro view of the entities in an ERD, focusing on eliminating redundancies?",
+      "answer": "Normalization",
+      "explanation": "Normalization breaks down entities to reduce anomalies and maintain data integrity."
+    },
+    {
+      "question_number": 43,
+      "question": "(T/F) All relational tables satisfy 1NF requirements?",
+      "answer": "True",
+      "explanation": "All relational tables are at least consistent with first normal form (1NF)."
+    },
+    {
+      "question_number": 44,
+      "question": "Which type of databases address the demand for broader, deeper data to support decision systems?",
+      "answer": "Data warehouse",
+      "explanation": "Data warehouses store large volumes of integrated data for analysis and business intelligence."
+    },
+    {
+      "question_number": 45,
+      "question": "Which normal form describes a table in 2NF with no transitive dependencies?",
+      "answer": "3NF",
+      "explanation": "Eliminating transitive dependencies is part of moving from 2NF to 3NF."
+    },
+    {
+      "question_number": 46,
+      "question": "To create a truly useful ERD, which process must be combined with ER modeling?",
+      "answer": "Normalization",
+      "explanation": "Normalization is essential to refine the ERD and eliminate data anomalies."
+    },
+    {
+      "question_number": 47,
+      "question": "When a related table uses a composite primary key, which key can be more difficult to create in referencing tables?",
+      "answer": "Foreign key",
+      "explanation": "Creating a foreign key to a composite key requires matching multiple columns."
+    },
+    {
+      "question_number": 48,
+      "question": "What do we call a collection of multiple entries of the same type that can exist for a single key attribute occurrence?",
+      "answer": "Repeating group",
+      "explanation": "Repeating groups occur when multiple values of the same attribute are tied to one key."
+    },
+    {
+      "question_number": 49,
+      "question": "Which type of dependency occurs when one key determines multiple values of two other attributes that are independent of each other?",
+      "answer": "Multivalued dependency",
+      "explanation": "A multivalued dependency is where a single key controls multiple independent attributes."
+    },
+    {
+      "question_number": 50,
+      "question": "(T/F) Repeating groups must be eliminated by ensuring each row defines a single entity?",
+      "answer": "True",
+      "explanation": "Repeating groups are removed by restructuring the table so each row reflects only one entity occurrence."
+    },
+    {
+      "question_number": 51,
+      "question": "In which type of diagram do arrows above the attributes indicate all desirable dependencies?",
+      "answer": "Dependency diagram",
+      "explanation": "A dependency diagram visually shows how attributes depend on keys or other attributes."
+    },
+    {
+      "question_number": 52,
+      "question": "What term describes storing data at the lowest level of detail (i.e., indivisible units of data)?",
+      "answer": "Atomic",
+      "explanation": "Atomic data means each attribute cannot be further decomposed without losing information."
+    },
+    {
+      "question_number": 53,
+      "question": "Which dependency exists when Y depends on X, Z depends on Y, and X is the primary key?",
+      "answer": "Transitive dependency",
+      "explanation": "Transitive dependency means Z is functionally dependent on X only through Y."
+    },
+    {
+      "question_number": 54,
+      "question": "What is the main goal of normalization in a database?",
+      "answer": "To eliminate data anomalies",
+      "explanation": "Normalization reduces data redundancy and helps avoid update, insertion, and deletion anomalies."
+    },
+    {
+      "question_number": 55,
+      "question": "What do we call raw data in its original state that often has redundant or multivalued data prior to normalization?",
+      "answer": "Unnormalized data",
+      "explanation": "Unnormalized data can contain repeating groups or other anomalies."
+    },
+    {
+      "question_number": 56,
+      "question": "(T/F) Relational models view data as part of a table collection in which all key values must be identified?",
+      "answer": "True",
+      "explanation": "A relational model stores data in tables (relations), requiring primary keys to identify rows."
+    },
+    {
+      "question_number": 57,
+      "question": "(T/F) Unnormalized tables yield no simple strategies for creating virtual tables (views)?",
+      "answer": "True",
+      "explanation": "Views are more complicated to create or use if the underlying data is unnormalized."
+    },
+    {
+      "question_number": 58,
+      "question": "What does the term 'granularity' refer to in a table's row values?",
+      "answer": "The level of detail represented by the stored values",
+      "explanation": "Higher granularity means more detailed data; lower granularity indicates more aggregated data."
+    },
+    {
+      "question_number": 59,
+      "question": "Which dependency occurs when a non-key attribute depends only on part of a composite primary key?",
+      "answer": "Partial dependency",
+      "explanation": "A partial dependency means the attribute depends on one (or some) of the composite key attributes but not all."
+    },
+    {
+      "question_number": 60,
+      "question": "Which term refers to the level of detail represented by the values stored in a table's row?",
+      "answer": "Granularity",
+      "explanation": "Granularity indicates how fine (detailed) or coarse the data storage is."
+    },
+    {
+      "question_number": 61,
+      "question": "Which logic expression is equivalent to WHERE NOT(attribute1 > 100 AND attribute2 = 100)?",
+      "answer": "WHERE attribute1 <= 100 AND attribute2 <> 100",
+      "explanation": "By De Morgan’s law, NOT(X AND Y) is (NOT X) OR (NOT Y). Rewriting leads to attribute1 <= 100 AND attribute2 <> 100."
+    },
+    {
+      "question_number": 62,
+      "question": "How do you retrieve rows from a table where a given column (e.g., phone) has no value stored (i.e., missing)?",
+      "answer": "Use the condition 'WHERE phone IS NULL'",
+      "explanation": "If an attribute is missing, it is NULL in the database, and 'IS NULL' checks for that condition."
+    },
+    {
+      "question_number": 63,
+      "question": "If you group by a column (e.g., YEAR) and apply an aggregate function (e.g., MAX(GPA)), how many rows are returned?",
+      "answer": "One result row per distinct group value",
+      "explanation": "GROUP BY splits the table into subsets, returning one row for each distinct group."
+    },
+    {
+      "question_number": 64,
+      "question": "(T/F) The COUNT function tallies the number of non-null values of an attribute and can be used with DISTINCT?",
+      "answer": "True",
+      "explanation": "COUNT(*) counts all rows, while COUNT(expression) ignores NULL in that expression, and COUNT(DISTINCT x) counts distinct non-NULL x."
+    },
+    {
+      "question_number": 65,
+      "question": "(T/F) All SQL commands must be written on a single line?",
+      "answer": "False",
+      "explanation": "SQL allows multiline formatting for better readability; there is no requirement to place everything on one line."
+    },
+    {
+      "question_number": 66,
+      "question": "In the SQL LIKE operator, how does the pattern '%c%s' match strings?",
+      "answer": "It matches any string containing 'c' followed eventually by 's' with any characters in between.",
+      "explanation": "The wildcard % stands for zero or more arbitrary characters."
+    },
+    {
+      "question_number": 67,
+      "question": "(T/F) Oracle users can rely on Microsoft Access’s QBE (query by example) generator for Oracle queries?",
+      "answer": "False",
+      "explanation": "The QBE interface is specific to Microsoft Access. Oracle does not support Access’s proprietary QBE generator."
+    },
+    {
+      "question_number": 68,
+      "question": "If a table column contains repeated name values, how does SELECT DISTINCT <column> behave?",
+      "answer": "It returns only unique names, removing any duplicates.",
+      "explanation": "The DISTINCT keyword ensures the query returns only distinct (unique) results."
+    },
+    {
+      "question_number": 69,
+      "question": "How can you filter rows by a column condition (e.g., YEAR > 2004) before grouping and then filter groups by an aggregate (e.g., AVG(GPA) > 2.4)?",
+      "answer": "Use WHERE for the row condition and HAVING for the aggregate condition.",
+      "explanation": "WHERE applies before grouping; HAVING applies after the rows are grouped."
+    },
+    {
+      "question_number": 70,
+      "question": "What is a key difference between WHERE and HAVING in SQL?",
+      "answer": "WHERE applies to individual rows before grouping, whereas HAVING applies to groups after grouping.",
+      "explanation": "HAVING filters the aggregated results, while WHERE filters the row set prior to aggregation."
+    },
+    {
+      "question_number": 71,
+      "question": "How do you retrieve rows that satisfy ranking < 3 AND rate > 0.4 when both conditions must be true?",
+      "answer": "Use 'WHERE ranking < 3 AND rate > 0.4'",
+      "explanation": "The AND operator returns rows meeting both conditions simultaneously."
+    },
+    {
+      "question_number": 72,
+      "question": "How do you show each student's code with an average grade higher than 3.0 using GROUP BY in SQL?",
+      "answer": "SELECT STU_CODE, AVG(GRADE) FROM tablename GROUP BY STU_CODE HAVING AVG(GRADE) > 3.0",
+      "explanation": "HAVING applies the condition to the groups formed by GROUP BY."
+    },
+    {
+      "question_number": 73,
+      "question": "Which condition is equivalent to: WHERE attribute IN (123, 200)?",
+      "answer": "WHERE attribute = 123 OR attribute = 200",
+      "explanation": "IN (x, y, ...) means the attribute’s value matches any listed value, effectively an OR condition."
+    },
+    {
+      "question_number": 74,
+      "question": "In general, a query with val2 BETWEEN 100 AND 400 AND val3 IN (10, 20) returns which rows?",
+      "answer": "All rows where val2 is between 100 and 400, inclusive, and val3 is either 10 or 20.",
+      "explanation": "BETWEEN restricts val2 to a numeric range, while IN restricts val3 to the listed values."
+    },
+    {
+      "question_number": 75,
+      "question": "Which condition is equivalent to WHERE attribute NOT BETWEEN 100 AND 1000?",
+      "answer": "WHERE attribute < 100 OR attribute > 1000",
+      "explanation": "NOT BETWEEN excludes the entire range, so the value must be less than 100 or greater than 1000."
+    },
+    {
+      "question_number": 76,
+      "question": "In an INNER JOIN between two tables, how many result rows are produced for each matching pair?",
+      "answer": "One row per match",
+      "explanation": "Each matched pair of rows in the two tables contributes one row in the result set."
+    },
+    {
+      "question_number": 77,
+      "question": "How do you find rows in a PROVIDERS table whose NAME contains 'Inc' anywhere in the string?",
+      "answer": "Use 'WHERE NAME LIKE '%Inc%'",
+      "explanation": "The % wildcard allows any number of characters before or after 'Inc'."
+    },
+    {
+      "question_number": 78,
+      "question": "How do you return the names of all students who achieved the maximum GPA in a STUDENT table?",
+      "answer": "SELECT NAME FROM STUDENT WHERE GPA = (SELECT MAX(GPA) FROM STUDENT)",
+      "explanation": "The subquery finds the highest GPA, and the outer query selects students matching it."
+    },
+    {
+      "question_number": 79,
+      "question": "How do you alias the MRENT field as 'monthly rent' in a SELECT statement?",
+      "answer": "SELECT MRENT AS \"monthly rent\" FROM tablename",
+      "explanation": "When the alias has spaces, it should be enclosed in quotes."
+    },
+    {
+      "question_number": 80,
+      "question": "How do you retrieve salesperson codes whose TOTAL exceeds the average TOTAL of all sales?",
+      "answer": "SELECT VCODE FROM SALES WHERE TOTAL > (SELECT AVG(TOTAL) FROM SALES)",
+      "explanation": "The subquery computes the average of TOTAL, then the outer query selects rows exceeding that average."
+    },
+    {
+      "question_number": 81,
+      "question": "If an invoice is overdue when DATE + TYPE days is greater than the current date, how can you detect overdue invoices?",
+      "answer": "SELECT * FROM INVOICE WHERE DATE + TYPE > CURDATE()",
+      "explanation": "If DATE + TYPE is beyond the current date, the invoice is overdue."
+    },
+    {
+      "question_number": 82,
+      "question": "If a student's birth date is stored in BIRTH_DATE, how might you extract just the month and day (the birthday)?",
+      "answer": "Use a function like TO_DATE(BIRTH_DATE, '%M-%D') or a similar date-format function",
+      "explanation": "Such functions parse the original date to extract or reformat the month and day."
+    },
+    {
+      "question_number": 83,
+      "question": "If you query the SALESPERSON table for the name matching (SELECT MAX(TOTAL) FROM SALES), what result do you get?",
+      "answer": "The name(s) of the salesperson(s) with a sale equal to the maximum TOTAL in SALES.",
+      "explanation": "The subquery obtains the highest sale, and the main query returns the salesperson(s) who made it."
+    },
+    {
+      "question_number": 84,
+      "question": "In subquery terminology, what do we call the first (main) query that references a subquery?",
+      "answer": "The outer query",
+      "explanation": "The subquery is often called the inner query; the first query is the outer query."
+    },
+    {
+      "question_number": 85,
+      "question": "Which function in MS Access returns the current system date?",
+      "answer": "DATE()",
+      "explanation": "In Access, DATE() retrieves the current date from the system."
+    },
+    {
+      "question_number": 86,
+      "question": "When using Oracle's TO_DATE function, which format code represents a three-letter month name?",
+      "answer": "MON",
+      "explanation": "MON is the code for a short month name, e.g. JAN, FEB, MAR."
+    },
+    {
+      "question_number": 87,
+      "question": "In a query with val2 > ALL(subquery), what must val2 exceed?",
+      "answer": "It must be greater than every value returned by the subquery.",
+      "explanation": "ALL requires the outer value to compare favorably against each row of the subquery result."
+    },
+    {
+      "question_number": 88,
+      "question": "If data needs to be preprocessed before the main query, what SQL feature can you use?",
+      "answer": "A subquery",
+      "explanation": "A subquery can compute or filter intermediate results that are then used by the outer query."
+    },
+    {
+      "question_number": 89,
+      "question": "How does SELECT cod1, (SELECT MAX(val2) FROM table1) - val2 AS DIFF compute a difference for rows where val1 = 10?",
+      "answer": "It subtracts each val2 from the global max(val2) and returns the difference as DIFF, restricted to rows where val1 = 10.",
+      "explanation": "The subquery obtains the maximum val2, then the expression calculates the difference for each relevant row."
+    },
+    {
+      "question_number": 90,
+      "question": "If you need the MD department’s students whose GPA exceeds the average GPA of all students in 2004, how might you write that query?",
+      "answer": "SELECT NAME, GPA FROM STUDENT WHERE DEPARTMENT = 'MD' AND GPA > (SELECT AVG(GPA) FROM STUDENT WHERE YEAR = 2004)",
+      "explanation": "The subquery calculates the 2004 average, and the main query checks which MD students beat that average."
+    },
+    {
+      "question_number": 91,
+      "question": "How can you create an implicit cursor in procedural SQL to count products in a certain price range?",
+      "answer": "Use a SELECT COUNT(...) INTO variable, e.g. SELECT COUNT(P_CODE) INTO W_NUM FROM PRODUCT WHERE ...",
+      "explanation": "An implicit cursor in procedural SQL stores a single-row result (like COUNT) directly into a variable."
+    },
+    {
+      "question_number": 92,
+      "question": "If new data was added after creating a VIEW, how can you see the updated data in that view (depending on the system)?",
+      "answer": "Re-run the CREATE VIEW or a similar command to refresh it, if necessary",
+      "explanation": "Some systems require the view definition to be re-executed or refreshed; others update automatically."
+    },
+    {
+      "question_number": 93,
+      "question": "In embedded SQL, why might a DELETE statement fail if the variable name was changed?",
+      "answer": "Because a colon (:) must precede the host variable’s name in embedded SQL references.",
+      "explanation": "Without the colon, the variable name is not recognized as a host variable."
+    },
+    {
+      "question_number": 94,
+      "question": "How can you handle a SELECT that returns multiple rows for further processing in procedural SQL?",
+      "answer": "Use a cursor",
+      "explanation": "A cursor allows row-by-row or multiple-row retrieval and processing from a SELECT query."
+    },
+    {
+      "question_number": 95,
+      "question": "In embedded SQL, which character must precede all host variables?",
+      "answer": "A colon (:)",
+      "explanation": "Host variables must be referenced with a leading colon, e.g. :myVar."
+    },
+    {
+      "question_number": 96,
+      "question": "If a SQL subquery renames P_CODE to PART_CODE, P_DESCRIPT to PART_DESCRIPT, etc., which table likely contains these original columns?",
+      "answer": "PRODUCT",
+      "explanation": "PRODUCT commonly has columns like P_CODE, P_DESCRIPT, P_PRICE, and so on."
+    },
+    {
+      "question_number": 97,
+      "question": "To retrieve PRODUCT rows priced below $50, which SQL clause ensures you only return those rows?",
+      "answer": "WHERE P_PRICE < 50",
+      "explanation": "The WHERE condition filters out rows that don’t meet the specified price threshold."
+    },
+    {
+      "question_number": 98,
+      "question": "(T/F) A subquery automatically overwrites an existing table if it has the same name?",
+      "answer": "False",
+      "explanation": "Most systems will either prompt for confirmation or fail; you cannot silently overwrite an existing table without proper steps."
+    },
+    {
+      "question_number": 99,
+      "question": "(T/F) Standard SQL supports conditional IF-THEN-ELSE statements like typical procedural languages?",
+      "answer": "False",
+      "explanation": "Standard SQL does not include procedural flow control; vendors add extensions (e.g. PL/SQL, T-SQL) for IF-THEN-ELSE."
+    },
+    {
+      "question_number": 100,
+      "question": "How do you return salesperson codes whose TOTAL is strictly greater than the global average of TOTAL?",
+      "answer": "SELECT VCODE FROM SALES WHERE TOTAL > (SELECT AVG(TOTAL) FROM SALES)",
+      "explanation": "Compute the average in a subquery, then compare each row’s TOTAL to that average."
+    }
+  ]  
